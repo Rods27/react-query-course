@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { fetchPosts, deletePost, updatePost } from './api';
 import { PostDetail } from './PostDetail';
 import { useQuery } from '@tanstack/react-query';
+import Loader from './components/Loader';
 const maxPostPage = 10;
 
 const Posts = () => {
@@ -29,12 +30,15 @@ const Posts = () => {
   return (
     <>
       <ul>
-        {!isLoading &&
+        {isLoading ? (
+          <Loader />
+        ) : (
           data.map((post) => (
             <li key={post.id} className="post-title" onClick={() => setSelectedPost(post)}>
               {post.title}
             </li>
-          ))}
+          ))
+        )}
       </ul>
       <div className="pages">
         <button disabled onClick={() => {}}>

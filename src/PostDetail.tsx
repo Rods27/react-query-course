@@ -25,15 +25,13 @@ export function PostDetail({ post }: IPostDetails) {
     return <div>{error.toString()}</div>;
   }
 
-  console.log(data);
-
   return (
     <>
       <h3 style={{ color: 'blue' }}>{post.title}</h3>
       <button>Delete</button> <button>Update title</button>
       <p>{post.body}</p>
       <h4>Comments</h4>
-      {!isLoading ? (
+      {isLoading ? (
         <Loader />
       ) : (
         data.map((comment) => (
