@@ -23,7 +23,7 @@ export async function deletePost(postId: number) {
 export async function updatePost(postId: number) {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
     method: 'PATCH',
-    data: { title: 'REACT QUERY FOREVER!!!!' },
+    // data: { title: 'REACT QUERY FOREVER!!!!' },
   });
   return response.json();
 }
