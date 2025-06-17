@@ -1,0 +1,37 @@
+.loader_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.loader_wrapper__loader{
+  width: 100px;
+  height: 100px;
+  border: 3px solid #2E2E37;
+  border-radius: 50%;
+  animation: rotateLoadingCircle 1.5s steps(50) infinite;
+}
+
+@keyframes rotateLoadingCircle{
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
