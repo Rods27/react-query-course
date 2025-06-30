@@ -14,7 +14,7 @@ async function getTreatments(): Promise<Treatment[]> {
 export function useTreatments(): Treatment[] {
   const { data } = useQuery({
     queryKey: [queryKeys.treatments],
-    queryFn: getTreatments
+    queryFn: getTreatments,
   })
   return data ?? [];
 }
