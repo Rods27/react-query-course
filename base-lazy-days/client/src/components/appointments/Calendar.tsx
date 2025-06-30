@@ -6,13 +6,17 @@ import {
   HStack,
   IconButton,
 } from "@chakra-ui/react";
+import { useQueryClient } from "@tanstack/react-query";
 import dayjs from "dayjs";
+import { useEffect } from "react";
 import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 
 import { DateBox } from "./DateBox";
-import { useAppointments } from "./hooks/useAppointments";
+import { getNewMonthYear } from "./hooks/monthYear";
+import { getAppointments, useAppointments } from "./hooks/useAppointments";
 
 import { UserAppointments } from "@/components/user/UserAppointments";
+import { queryKeys } from "@/react-query/constants";
 
 export function Calendar() {
   const currentDate = dayjs();
