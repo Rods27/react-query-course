@@ -1,3 +1,10 @@
-# udemy-REACT-QUERY
+# React-Query-Course
 
-Code to support the Udemy course [React Query: Server State Management in React](https://www.udemy.com/course/learn-react-query/?couponCode=REACT-QUERY-GITHUB)
+This repository is a collection of projects to test React Query knowledge.
+
+## blog-em
+
+This project have basic React Query features, such as useQuery, useMutation, error and loading handlers.
+
+## lazy-days
+  
