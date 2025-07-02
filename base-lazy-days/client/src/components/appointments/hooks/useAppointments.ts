@@ -26,8 +26,7 @@ const commonOptions = {
 export function useAppointments() {
   const currentMonthYear = getMonthYearDetails(dayjs());
   const [monthYear, setMonthYear] = useState(currentMonthYear);
-  const [showAll, setShowAll] = useState(false);
-  
+  const [showAll, setShowAll] = useState(true);
   const queryClient = useQueryClient();
   
   const { userId } = useLoginData();
@@ -37,8 +36,8 @@ export function useAppointments() {
   }
 
   const selectFunction = useCallback((data: AppointmentDateMap, showAll: boolean) => {
-    if(showAll) return data;
-    getAvailableAppointments(data, userId);
+    if(!showAll) return data;
+    return getAvailableAppointments(data, userId);
   }, [userId])
 
   useEffect(() => {

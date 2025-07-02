@@ -46,7 +46,7 @@ export function Calendar() {
           width="48"
           position="absolute"
           right="10px"
-          checked={!showAll}
+          checked={showAll}
           defaultChecked
           onChange={() => setShowAll((prevValue) => !prevValue)}
         >
