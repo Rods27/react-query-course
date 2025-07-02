@@ -30,6 +30,7 @@ export function Card({ itemName, image, cardContents }: CardProps) {
         rounded="lg"
         pos="relative"
         zIndex={1}
+        data-testid={`card-${itemName}`}
       >
         <Box rounded="lg" mt={-12} pos="relative" height="230px">
           <Image

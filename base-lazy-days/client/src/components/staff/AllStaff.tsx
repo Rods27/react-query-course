@@ -16,7 +16,10 @@ export function AllStaff() {
       </Heading>
       <HStack m={10} spacing={8} justify="center">
         {staff.map((staffData) => (
-          <Staff key={staffData.id} staffData={staffData} />
+          <Staff 
+            key={staffData.id} 
+            staffData={staffData} 
+          />
         ))}
       </HStack>
       <RadioGroup onChange={setFilter} value={filter}>
