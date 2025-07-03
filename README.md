@@ -22,7 +22,7 @@ to use it, you will need to run the server. Go to the server folder, install the
 
 and then, type `npm run dev`.
 
-to run the client side, go to the client folder, run `npm install && npm run dev`.
+to run the client side, go to the client folder, run `npm install` and  `npm run dev`.
 
 
 
